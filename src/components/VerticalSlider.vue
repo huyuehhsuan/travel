@@ -100,9 +100,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 .container {
-  font-family: "Open Sans", sans-serif;
   height: 100vh;
   margin: 0;
 }
@@ -158,6 +156,7 @@ button {
 }
 button:hover {
   color: rgb(66, 66, 66);
+  cursor: pointer;
 }
 button:focus {
   outline: none;
@@ -166,7 +165,7 @@ button:focus {
   position: absolute;
   left: 35%;
   top: 50%;
-  z-index: 100;
+  z-index: 10;
 }
 .slider-container .active-buttons .down-button {
   transform: translateX(-100%);

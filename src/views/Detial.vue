@@ -86,15 +86,24 @@ export default {
   max-width: 1200px;
   margin: auto;
   display: flex;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 .back {
   display: block;
   padding: 20px 80px;
+  @media screen and (max-width: 700px) {
+    padding: 10px;
+  }
 }
 .container .img {
   width: 50%;
   overflow: hidden;
   text-align: center;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 .container .img img {
   width: 100%;
@@ -103,5 +112,8 @@ export default {
 .container .cityInfo {
   width: 50%;
   padding: 2rem;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 </style>

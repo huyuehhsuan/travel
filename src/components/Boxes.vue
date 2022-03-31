@@ -58,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 .box-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 80px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;

@@ -3,28 +3,33 @@
     <router-link to="/" class="back">&lt; Back</router-link>
     <div class="container">
       <div class="img">
-        <img :src="cityList[cityData.id - 1].img" alt="" />
+        <img :src="cityData.img" alt="img" />
       </div>
 
       <div class="cityInfo">
-        <h1>{{ cityData.city.toUpperCase() }}</h1>
-        <p>
-          {{ cityList[cityData.id - 1].description }}
-        </p>
+        <div>
+          <h1>{{ cityData.city.toUpperCase() }}</h1>
+          <p>
+            {{ cityData.description }}
+          </p>
+        </div>
+
+        <WeatherApp />
       </div>
     </div>
-    <Scroll />
+    <Scroll :id="cityData.id" />
   </div>
 </template>
 
 <script>
 import Scroll from "@/components/Scroll.vue";
+import WeatherApp from "@/components/WeatherApp.vue";
 export default {
   name: "Detial",
-  components: { Scroll },
+  components: { WeatherApp, Scroll },
   data() {
     return {
-      cityData: { id: 1, city: "tokyo" },
+      cityData: { id: null, city: "", img: "", description: "" },
       cityList: [
         {
           id: 1,
@@ -35,7 +40,7 @@ export default {
         },
         {
           id: 2,
-          city: "newyork",
+          city: "new york",
           img: "https://images.unsplash.com/flagged/photo-1575597255483-55f2afb6f42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
           description:
             "newyork Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ipsa rem adipisci impedit ipsum! Distinctio reprehenderit dolore in veritatis? Laboriosam nemo minus facere ea, aliquam repellat a nostrum ex aperiam!",
@@ -112,8 +117,15 @@ export default {
 .container .cityInfo {
   width: 50%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media screen and (max-width: 700px) {
     width: 100%;
   }
+}
+.cityInfo h1 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 </style>

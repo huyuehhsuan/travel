@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        name: 'Home',
+        name: '',
         component: Home,
         children: [{
             path: '/',
@@ -27,9 +27,13 @@ const routes = [{
 ]
 
 const router = new VueRouter({
+    scrollBehavior() {
+        return { x: 0, y: 0, behavior: 'smooth' };
+    },
     mode: 'history',
     base: process.env.BASE_URL,
     routes
 })
+
 
 export default router

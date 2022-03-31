@@ -1,29 +1,15 @@
 <template>
-  <div>
-    <section style="min-height: unset">
-      <h1 class="text-jump">ScrollDown &#8595;</h1>
-      <!-- <h1 class="text-pop">ScrollDown &#8595;</h1>
-      <h1 class="text-flip">ScrollDown &#8595;</h1>
-      <h1 class="text-blink">ScrollDown &#8595;</h1> -->
-    </section>
+  <div class="scroll-container">
     <section>
       <div class="container reveal fade-bottom">
         <h2>WEATHER</h2>
         <div class="text-container">
           <div class="img-box">
-            <img
-              src="https://images.unsplash.com/photo-1555090975-4bbd0039351b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-              alt=""
-            />
+            <img :src="detial[id - 1].weather.img" alt="" />
           </div>
           <div class="text-box">
-            <h3>四季分明 雨水充沛 氣候宜人</h3>
-            <p>
-              美國大部分地區都受到冬季季風的影響，大陸性明顯，但紐約位於美國東北，地處阿巴拉契亞山脈的背風一側，使得冬季風的影響止於中央大平原，加之墨西哥灣暖流為紐約增溫增溼，全年降水均勻，年降水量超過一千毫米，降水的天數可達123天，年平均溫度在10攝氏度左右，無霜期能夠達到全年的四分之三，形成了典型的溫帶海洋性氣候。
-            </p>
-            <p>
-              受海洋性氣候的影響，紐約的夏季沒有過分炎熱，六月到九月份的平均溫度約為二十一攝氏度，降水最集中在7月份，同時也是溫度最高的時節，單月降水量可達100毫米左右，月平均溫度約27.5攝氏度，也會出現30度以上的天氣，空氣溼度大，午後常常有雷陣雨造訪，悶熱而潮溼，不宜進行長時間的戶外活動。
-            </p>
+            <h3>{{ detial[id - 1].weather.title }}</h3>
+            <p>{{ detial[id - 1].weather.text }}</p>
           </div>
         </div>
       </div>
@@ -74,33 +60,17 @@
 </template>
 
 <script>
+import detialList from "@/data/detialList.json";
 export default {
   name: "Scroll",
+  props: ["id"],
+  data() {
+    return {
+      detial: detialList,
+    };
+  },
   mounted() {
     window.addEventListener("scroll", this.reveal);
-    const textJump = document.querySelector(".text-jump");
-    textJump.innerHTML = textJump.textContent.replace(/\S/g, "<span>$&</span>");
-    document.querySelectorAll(".text-jump span").forEach((item, index) => {
-      item.style.setProperty("--delay", `${index * 0.1}s`);
-    });
-    const textPop = document.querySelector(".text-pop");
-    textPop.innerHTML = textPop.textContent.replace(/\S/g, "<span>$&</span>");
-    document.querySelectorAll(".text-pop span").forEach((item, index) => {
-      item.style.setProperty("--delay", `${index * 0.1}s`);
-    });
-    const textFlip = document.querySelector(".text-flip");
-    textFlip.innerHTML = textFlip.textContent.replace(/\S/g, "<span>$&</span>");
-    document.querySelectorAll(".text-flip span").forEach((item, index) => {
-      item.style.setProperty("--delay", `${index * 0.1}s`);
-    });
-    const textBlink = document.querySelector(".text-blink");
-    textBlink.innerHTML = textBlink.textContent.replace(
-      /\S/g,
-      "<span>$&</span>"
-    );
-    document.querySelectorAll(".text-blink span").forEach((item, index) => {
-      item.style.setProperty("--delay", `${index * 0.1}s`);
-    });
   },
   methods: {
     reveal() {
@@ -121,7 +91,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.scroll-container {
+  margin: 80px auto;
+}
 section {
   // min-height: 100vh;
   display: flex;
@@ -129,18 +102,18 @@ section {
   align-items: center;
 }
 section:nth-child(1) {
-  color: gray;
+  color: #173057;
 }
 section:nth-child(2) {
-  color: #ffffff;
-  background: rgb(255, 73, 73);
+  color: #173057;
+  background: #66a1ff;
 }
 section:nth-child(3) {
-  color: rgb(255, 73, 73);
+  color: #173057;
 }
 section:nth-child(4) {
-  color: #ffffff;
-  background: rgb(255, 73, 73);
+  color: #173057;
+  background: #66a1ff;
 }
 section .container {
   margin: 100px;
@@ -151,6 +124,12 @@ section .container {
 section h1 {
   font-size: 3rem;
   margin: 20px;
+}
+section h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
 }
 section span {
   display: inline-block;
@@ -171,12 +150,6 @@ section .text-flip span {
 section .text-blink span {
   animation-name: text-blink;
 }
-section h2 {
-  font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 section .text-container {
   display: flex;
 }
@@ -191,7 +164,7 @@ section .text-container .text-box {
   width: 50%;
   margin: 20px;
   padding: 2rem;
-  background: rgb(255, 203, 62);
+  background: rgb(255, 226, 145);
 }
 section .text-container .text-box h3 {
   font-size: 2rem;

@@ -1,6 +1,7 @@
 <template>
   <div class="picker-container">
     <h3>enter choies</h3>
+    <p>輸入想去的目的地，並用 ',' 隔開,輸入完成請按Enter</p>
     <textarea placeholder="enter choices" id="textarea" />
     <div id="tags"></div>
   </div>
@@ -41,6 +42,7 @@ export default {
       const times = 30;
       const intreval = setInterval(() => {
         const randomTag = this.pickRandomTag();
+
         this.highLightTag(randomTag);
         setTimeout(() => {
           this.unhighLightTag(randomTag);
@@ -56,7 +58,7 @@ export default {
     },
     pickRandomTag() {
       const tags = document.querySelectorAll(".tag");
-      return tags[Math.floor(Math.random * tags.length)];
+      return tags[Math.floor(Math.random() * tags.length)];
     },
     highLightTag(tag) {
       tag.classList.add("highlight");
@@ -71,13 +73,15 @@ export default {
 <style lang="scss" >
 .picker-container {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 80px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(180, 180, 180);
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
   padding: 30px;
+  border-radius: 20px;
+  color: gray;
 }
 .picker-container textarea {
   border: none;
@@ -85,9 +89,12 @@ export default {
   width: 100%;
   height: 100px;
 }
+.picker-container p {
+  margin: 10px 0;
+}
 .tag {
   display: inline-block;
-  background-color: orange;
+  background-color: #ffc44f;
   color: #fff;
   border-radius: 10px;
   padding: 4px 10px;
@@ -95,6 +102,9 @@ export default {
   font-size: 14px;
 }
 .tag.highlight {
-  background-color: rgb(0, 0, 100);
+  background-color: #66a1ff;
+}
+textarea:focus {
+  outline: 1px solid gray;
 }
 </style>

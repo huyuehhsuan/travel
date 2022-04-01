@@ -20,17 +20,11 @@
         <h2>CUISINE</h2>
         <div class="text-container">
           <div class="text-box reveal fade-left">
-            <h3>Section Text</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eius molestiae perferendis eos provident vitae iste.
-            </p>
+            <h3>{{ detial[id - 1].cuisice.title }}</h3>
+            <p>{{ detial[id - 1].cuisice.text }}</p>
           </div>
           <div class="img-box reveal fade-right">
-            <img
-              src="https://images.unsplash.com/photo-1555090975-4bbd0039351b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-              alt=""
-            />
+            <img :src="detial[id - 1].cuisice.img" alt="" />
           </div>
         </div>
       </div>
@@ -41,17 +35,11 @@
         <h2>FESTIVAL</h2>
         <div class="text-container">
           <div class="img-box reveal fade-right">
-            <img
-              src="https://images.unsplash.com/photo-1555090975-4bbd0039351b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-              alt=""
-            />
+            <img :src="detial[id - 1].festival.img" alt="" />
           </div>
           <div class="text-box">
-            <h3>Section Text</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eius molestiae perferendis eos provident vitae iste.
-            </p>
+            <h3>{{ detial[id - 1].festival.title }}</h3>
+            <p>{{ detial[id - 1].festival.text }}</p>
           </div>
         </div>
       </div>

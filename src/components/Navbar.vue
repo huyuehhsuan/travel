@@ -5,11 +5,10 @@
     </div>
     <div class="nav-links">
       <router-link to="/" class="nav-item">Home</router-link>
-      <router-link to="/LogIn" class="nav-item">LogIn</router-link>
-      <router-link to="/" class="nav-item" @click.native="logout">
-        LogOut</router-link
-      >
-      <router-link to="/Cart" class="nav-item">Cart</router-link>
+
+      <a href="#" class="nav-item">Aobut</a>
+      <a href="#" class="nav-item">Contact</a>
+      <a href="#" class="nav-item">Contact</a>
       <a href="#" class="nav-item">Contact</a>
     </div>
   </div>

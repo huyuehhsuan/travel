@@ -19,7 +19,7 @@
           <a href="#">課程摘要</a>
         </nav>
       </div>
-      <div class="footer-item">
+      <!-- <div class="footer-item">
         <h4>title</h4>
         <nav>
           <a href="#">聯絡我們</a>
@@ -27,7 +27,7 @@
           <a href="#">網站大綱</a>
           <a href="#">課程摘要</a>
         </nav>
-      </div>
+      </div> -->
       <div class="footer-item footer-sub">
         <h4>title</h4>
         <form action="">
@@ -55,22 +55,33 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .main-footer {
   padding-top: 150px;
   background: linear-gradient(-45deg, #9adcff, #fff89a, #ffb2a6, #ff8aae);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  @media screen and (max-width: 700px) {
+    padding-top: 50px;
+  }
 }
 .main-footer .container {
   width: 1200px;
   margin: auto;
   display: flex;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .footer-item {
   width: 0;
   flex-grow: 1;
   margin: 0 20px;
+  @media screen and (max-width: 700px) {
+    width: 50%;
+    flex-grow: unset;
+  }
 }
 .footer-item h4 {
   font-size: 24px;
@@ -102,6 +113,9 @@ export default {
 .footer-sub {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 700px) {
+    width: 80%;
+  }
 }
 .footer-sub form {
   display: flex;

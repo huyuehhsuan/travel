@@ -3,20 +3,20 @@
     <div class="slider-container">
       <div class="left-slider">
         <div style="background-color: #ffc44f">
-          <h1>nature1</h1>
-          <p>Lorem yellow</p>
+          <h1>Nature</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
         <div style="background-color: #ff367f">
-          <h1>nature2</h1>
-          <p>Lorem red</p>
+          <h1>Travel</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
         <div style="background-color: #66a1ff">
-          <h1>nature3</h1>
-          <p>Lorem blue</p>
+          <h1>Freedom</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
         <div style="background-color: #e6f1f5">
-          <h1>nature4</h1>
-          <p>Lorem white</p>
+          <h1>Explore</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
       <div class="right-slider">

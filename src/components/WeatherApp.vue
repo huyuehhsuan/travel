@@ -210,12 +210,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style  lang="scss" scoped>
 .app {
   max-width: 400px;
   padding: 30px;
   text-align: center;
   margin: 0 auto;
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
 }
 
 .content {

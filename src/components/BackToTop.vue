@@ -75,6 +75,8 @@ export default {
   .back-up {
     height: 0.85rem !important;
     width: 0.85rem !important;
+    font-size: 12px;
+    padding: 5px;
   }
 }
 </style>

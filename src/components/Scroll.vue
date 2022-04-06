@@ -95,6 +95,9 @@ section:nth-child(1) {
 section:nth-child(2) {
   color: #173057;
   background: #66a1ff;
+  @media screen and (max-width: 576px) {
+    background: transparent;
+  }
 }
 section:nth-child(3) {
   color: #173057;
@@ -102,22 +105,33 @@ section:nth-child(3) {
 section:nth-child(4) {
   color: #173057;
   background: #66a1ff;
+  @media screen and (max-width: 576px) {
+    background: transparent;
+  }
 }
 section .container {
   margin: 100px;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     margin: 0;
   }
 }
 section h1 {
   font-size: 3rem;
   margin: 20px;
+  @media screen and (max-width: 576px) {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 section h2 {
   margin-bottom: 20px;
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+    color: #999;
+  }
 }
 section span {
   display: inline-block;
@@ -140,10 +154,22 @@ section .text-blink span {
 }
 section .text-container {
   display: flex;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+section:nth-child(2) .text-container {
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
 }
 section .text-container .img-box {
   width: 50%;
   margin: 20px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin: 0;
+  }
 }
 section .text-container .img-box img {
   width: 100%;
@@ -153,22 +179,17 @@ section .text-container .text-box {
   margin: 20px;
   padding: 2rem;
   background: rgb(255, 226, 145);
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin: 0;
+    background: transparent;
+  }
 }
 section .text-container .text-box h3 {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 2rem;
-}
-
-@media (max-width: 900px) {
-  section h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container {
-    flex-direction: column;
-  }
 }
 
 .reveal {

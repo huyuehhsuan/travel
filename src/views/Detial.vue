@@ -91,14 +91,14 @@ export default {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 }
 .back {
   display: block;
   padding: 20px 80px;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     padding: 10px;
   }
 }
@@ -106,7 +106,7 @@ export default {
   width: 50%;
   overflow: hidden;
   text-align: center;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 }
@@ -120,7 +120,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 }

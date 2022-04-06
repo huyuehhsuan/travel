@@ -1,7 +1,7 @@
 <template>
   <div class="picker-container">
-    <h3>enter choies</h3>
-    <p>輸入想去的目的地，並用 ',' 隔開,輸入完成請按Enter</p>
+    <h3>還在猶豫嗎?幫您選擇旅行地</h3>
+    <p>輸入有興趣的目的地，並用 ',' 隔開,輸入完成請按Enter</p>
     <textarea placeholder="enter choices" id="textarea" />
     <div id="tags"></div>
   </div>

@@ -2,21 +2,21 @@
   <div class="main-footer">
     <div class="container">
       <div class="footer-item">
-        <h4>title</h4>
+        <h4>聯絡我們</h4>
         <nav>
           <a href="#">聯絡我們</a>
           <a href="#">其他問題</a>
-          <a href="#">網站大綱</a>
-          <a href="#">課程摘要</a>
+          <a href="#">隱私政策</a>
+          <a href="#">法律條款</a>
         </nav>
       </div>
       <div class="footer-item">
-        <h4>title</h4>
+        <h4>聯絡我們</h4>
         <nav>
           <a href="#">聯絡我們</a>
           <a href="#">其他問題</a>
-          <a href="#">網站大綱</a>
-          <a href="#">課程摘要</a>
+          <a href="#">隱私政策</a>
+          <a href="#">法律條款</a>
         </nav>
       </div>
       <!-- <div class="footer-item">
@@ -29,7 +29,7 @@
         </nav>
       </div> -->
       <div class="footer-item footer-sub">
-        <h4>title</h4>
+        <h4>訂閱電子報</h4>
         <form action="">
           <input type="text" />
           <input type="submit" value="訂閱" />
@@ -61,15 +61,15 @@ export default {
   background: linear-gradient(-45deg, #9adcff, #fff89a, #ffb2a6, #ff8aae);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     padding-top: 50px;
   }
 }
 .main-footer .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     flex-direction: column;
   }
@@ -78,7 +78,7 @@ export default {
   width: 0;
   flex-grow: 1;
   margin: 0 20px;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     width: 50%;
     flex-grow: unset;
   }
@@ -89,6 +89,10 @@ export default {
   border-bottom: 1px rgb(255, 255, 255) solid;
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin-top: 0.5em;
+  }
 }
 .footer-item nav {
   display: flex;
@@ -109,11 +113,14 @@ export default {
   padding: 10px 0;
   color: rgb(155, 155, 155);
   background-color: blanchedalmond;
+  @media screen and (max-width: 576px) {
+    margin-top: 30px;
+  }
 }
 .footer-sub {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 576px) {
     width: 80%;
   }
 }

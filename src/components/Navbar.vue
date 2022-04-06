@@ -1,13 +1,13 @@
 <template>
   <div class="nav">
     <div class="nav-btn">
-      <label for="nav-check" class="nav-button"> click </label>
+      <label for="nav-check" class="nav-button">Click</label>
     </div>
     <div class="nav-links">
       <router-link to="/" class="nav-item">Home</router-link>
 
-      <a href="#" class="nav-item">Aobut</a>
-      <a href="#" class="nav-item">Contact</a>
+      <a href="#" class="nav-item">About</a>
+      <a href="#" class="nav-item">Q&amp;A</a>
       <a href="#" class="nav-item">Contact</a>
       <a href="#" class="nav-item">Contact</a>
     </div>
